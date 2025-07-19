@@ -1,74 +1,120 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Farkhan</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-      overflow-x: hidden;
-    }
-    header {
-      padding: 25px;
-      background: linear-gradient(90deg, #00f0ff, #ff00f0);
-      -webkit-background-clip: text;
-      color: transparent;
-      font-size: 2.8em;
-      animation: glow 4s infinite ease-in-out;
-    }
-    .desc {
-      font-size: 1.3em;
-      margin-bottom: 20px;
-    }
-    img {
-      max-width: 240px;
-      border-radius: 15px;
-      box-shadow: 0 0 30px #ff00f0;
-      animation: float 6s ease-in-out infinite;
-      margin: 25px auto;
-      display: block;
-    }
-    button {
-      padding: 10px 25px;
-      background: linear-gradient(to right, #00c6ff, #0072ff);
-      border: none;
-      border-radius: 10px;
-      color: #fff;
-      font-size: 1em;
-      cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s;
-      margin-bottom: 50px;
-    }
-    button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px #00c6ff;
-    }
-
-    @keyframes glow {
-      0%, 100% {
-        text-shadow: 0 0 10px #f0f, 0 0 20px #0ff;
-      }
-      50% {
-        text-shadow: 0 0 25px #0ff, 0 0 40px #f0f;
-      }
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0);}
-      50% { transform: translateY(-12px);}
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kelompok Neon</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>Farkhan</header>
-  <div class="desc">Anggota Kelompok XII TJKT 3</div>
-  <img src="IMG-20250719-WA0010.jpg" alt="Foto Farkhan">
-  <button onclick="window.location.href='index.html'">Kembali ke Beranda</button>
+  <div class="container">
+    <h1>Kelompok Web Neon</h1>
+    <p>Klik nama untuk melihat anggota!</p>
+
+    <div class="button-group">
+      <button onclick="showImage('farkhan')">Farkhan</button>
+      <button onclick="showImage('nazril')">Nazril</button>
+      <button onclick="showImage('reza')">Reza</button>
+      <button onclick="showImage('dani')">Dani</button>
+      <button onclick="showImage('frandy')">Frandy</button>
+      <button onclick="showImage('ilham')">Ilham</button>
+      <button onclick="showImage('rizki')">Rizki</button>
+    </div>
+
+    <div class="image-area" id="imageArea">
+      <img id="anggotaFoto" src="" alt="Foto Anggota" style="display:none;" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: url('https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  padding: 50px;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 15px;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 700px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #f0f;
+  text-shadow: 0 0 10px #0ff;
+}
+
+p {
+  margin-bottom: 30px;
+  font-size: 1.2em;
+}
+
+.button-group button {
+  background: transparent;
+  border: 2px solid #0ff;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 8px;
+  border-radius: 10px;
+  font-size: 1em;
+  transition: 0.3s ease;
+  cursor: pointer;
+  text-shadow: 0 0 5px #fff;
+}
+
+.button-group button:hover {
+  background-color: #0ff;
+  color: #000;
+  box-shadow: 0 0 20px #0ff;
+}
+
+.image-area {
+  margin-top: 30px;
+}
+
+#anggotaFoto {
+  max-width: 100%;
+  max-height: 400px;
+  border: 4px solid #f0f;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #0ff;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+function showImage(nama) {
+  const foto = document.getElementById("anggotaFoto");
+  const folder = "./"; // Lokasi file gambar (ubah sesuai jika di folder lain)
+
+  const fotoMap = {
+    farkhan: "IMG-20250719-WA0010.jpg",
+    nazril: "IMG-20250719-WA0011.jpg",
+    reza: "reza.jpg",
+    dani: "dani.jpg",
+    frandy: "frandy.jpg",
+    ilham: "ilham.jpg",
+    rizki: "rizki.jpg"
+  };
+
+  if (fotoMap[nama]) {
+    foto.src = folder + fotoMap[nama];
+    foto.style.display = "block";
+    foto.classList.remove("fadeIn");
+    void foto.offsetWidth; // restart animation
+    foto.classList.add("fadeIn");
+  }
+}
