@@ -1,0 +1,70 @@
+body {
+  background-color: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #00f;
+}
+
+#daftar-anggota {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 750px;
+  margin: 0 auto 20px;
+}
+
+.glow-button {
+  padding: 10px 16px;
+  background-color: transparent;
+  border: 2px solid cyan;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 5px cyan;
+  box-shadow: 0 0 10px cyan, 0 0 20px cyan;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.glow-button:hover {
+  background-color: cyan;
+  color: black;
+}
+
+#foto-container {
+  margin: 20px auto;
+}
+
+#tentangKami {
+  margin: 15px auto;
+  color: #0ff;
+  max-width: 600px;
+  font-size: 1rem;
+  text-shadow: 0 0 5px #0ff;
+}
+
+hr {
+  margin: 40px auto 10px;
+  width: 60%;
+  height: 2px;
+  background: #0ff;
+  border: none;
+  box-shadow: 0 0 15px #0ff;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ff00cc;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #ff00cc, 0 0 10px #ff00cc;
+}
