@@ -1,132 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kelompok</title>
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      background-color: #000;
       font-family: 'Segoe UI', sans-serif;
-    }
-
-    body {
-      background-color: #000; /* Background hitam */
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+      color: white;
+      overflow-x: hidden;
     }
 
     h1 {
-      color: #fff;
-      text-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
-      margin-bottom: 40px;
-      font-size: 2.5rem;
-      animation: glowFade 2s infinite alternate;
-    }
-
-    @keyframes glowFade {
-      0% {
-        text-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
-      }
-      100% {
-        text-shadow: 0 0 20px #ff0, 0 0 40px #0ff;
-      }
+      text-align: center;
+      margin-top: 50px;
+      font-size: 3em;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
     }
 
     .button-container {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      align-items: center;
+      margin-top: 60px;
+      gap: 20px;
     }
 
     .glow-button {
-      padding: 12px 24px;
-      background: transparent;
+      background-color: transparent;
       border: 2px solid #0ff;
-      color: #fff;
-      font-size: 1.2rem;
-      border-radius: 8px;
+      color: #0ff;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 12px;
       cursor: pointer;
-      text-shadow: 0 0 5px #fff;
-      transition: all 0.3s ease-in-out;
-      box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
-      animation: slideIn 0.5s ease forwards;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px #0ff;
+      animation: fadeIn 0.5s ease forwards;
       opacity: 0;
     }
 
     .glow-button:hover {
-      background-color: rgba(0, 255, 255, 0.2);
-      box-shadow: 0 0 20px #0ff, 0 0 30px #f0f;
+      background-color: #0ff;
+      color: #000;
+      box-shadow: 0 0 20px #0ff;
+      transform: scale(1.05);
     }
 
-    @keyframes slideIn {
-      from {
-        transform: translateY(30px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    footer {
-      position: absolute;
-      bottom: 10px;
-      color: #ccc;
-      font-size: 0.9rem;
-      text-shadow: 0 0 5px #0ff;
-      text-align: center;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .courtesy {
-      color: #ff66c4;
-      margin-top: 5px;
-      font-weight: bold;
-      text-shadow: 0 0 10px #ff66c4, 0 0 20px #ff66c4;
+      text-align: center;
+      margin-top: 50px;
+      font-size: 1em;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <h1>Kelompok</h1>
-  <div class="button-container" id="buttonContainer">
-    <!-- Tombol akan muncul dari JS -->
-  </div>
 
-  <footer>
-    &copy; 2025 - Tim Neon <br />
-    <div class="courtesy">Courtesy: Farkhan ❤</div>
-  </footer>
+  <h1>Kelompok</h1>
+
+  <div class="button-container" id="buttons"></div>
+
+  <div class="courtesy">Courtesy Farkhan ❤</div>
 
   <script>
     const names = [
-  { name: "Farkhan Ramdani", file: "farkhan.html" },
-  { name: "M. Ilham Saifa R", file: "ilham.html" },
-  { name: "M. Kenar Alva Reza", file: "reza.html" },
-  { name: "M. Dani Saputra", file: "dani.html" },
-  { name: "Frandy Hermawan", file: "frandy.html" },
-  { name: "Nazril Ilham Maulana", file: "nazril.html" },
-  { name: "Rizki Awal Ramadhani", file: "rizki.html" },
-  { name: "Akhmad Ibnu Rafi", file: "ibnu.html" }, 
-];
+      { name: "Farkhan Ramdani", file: "farkhan.html" },
+      { name: "M. Ilham Saifa R", file: "ilham.html" },
+      { name: "M. Kenar Alva Reza", file: "reza.html" },
+      { name: "M. Dani Saputra", file: "dani.html" },
+      { name: "Frandy Hermawan", file: "frandy.html" },
+      { name: "Nazril Ilham Maulana", file: "nazril.html" },
+      { name: "Rizki Awal Ramadhani", file: "rizki.html" },
+      { name: "Akhmad Ibnu Rafi", file: "rafi.html" }
+    ];
 
-    const container = document.getElementById('buttonContainer');
+    function createButtons() {
+      const container = document.getElementById('buttons');
+      names.forEach((item, index) => {
+        const button = document.createElement('button');
+        button.className = 'glow-button';
+        button.textContent = item.name;
+        button.style.animationDelay = `${index * 0.3}s`;
+        button.onclick = () => window.location.href = item.file;
+        container.appendChild(button);
+      });
+    }
 
-    anggota.forEach((person, index) => {
-      setTimeout(() => {
-        const btn = document.createElement('button');
-        btn.textContent = person.nama;
-        btn.classList.add('glow-button');
-        btn.style.animationDelay = `${index * 0.3}s`;
-        btn.onclick = () => window.location.href = person.link;
-        container.appendChild(btn);
-      }, index * 300);
-    });
+    createButtons();
   </script>
+
 </body>
 </html>
