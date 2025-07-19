@@ -16,7 +16,7 @@
     }h1 {
   margin-top: 40px;
   font-size: 3em;
-  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #ff0, 0 0 30px #f0f;
 }
 
 .team-photo {
@@ -36,22 +36,23 @@
 
 .glow-button {
   background-color: transparent;
-  border: 2px solid #0ff;
-  color: #0ff;
+  border: 2px solid;
+  color: #fff;
   padding: 12px 30px;
   margin: 10px;
   border-radius: 30px;
   font-size: 1.2em;
   cursor: pointer;
-  text-shadow: 0 0 10px #0ff;
-  box-shadow: 0 0 15px #0ff;
+  text-shadow: 0 0 5px #fff;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #f0f, 0 0 30px #ff0;
   transition: transform 0.3s ease, opacity 0.5s ease;
   opacity: 0;
   transform: translateY(30px);
+  animation: neon-glow 2s infinite alternate;
 }
 
 .glow-button:hover {
-  background-color: rgba(0, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   transform: scale(1.1);
 }
 
@@ -60,11 +61,20 @@
   transform: translateY(0);
 }
 
+@keyframes neon-glow {
+  from {
+    box-shadow: 0 0 10px #0ff, 0 0 20px #f0f, 0 0 30px #ff0;
+  }
+  to {
+    box-shadow: 0 0 20px #0ff, 0 0 30px #f0f, 0 0 40px #ff0;
+  }
+}
+
   </style>
 </head>
 <body>
   <h1>Tim Neon Cyber City</h1>
-  <img src="https://images.unsplash.com/photo-1579982174119-facb0f397b06?auto=format&fit=crop&w=600&q=80" alt="Team Photo" class="team-photo">
+  <img src="IMG-20250719-WA0007.jpg" alt="Team Photo" class="team-photo">
   <div class="button-container" id="buttons">
     <a href="./farkhan.html" class="glow-button">Farkhan</a>
     <a href="./ilham.html" class="glow-button">Ilham</a>
