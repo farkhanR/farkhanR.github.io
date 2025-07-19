@@ -2,45 +2,37 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kelompok</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kelompok Kreatif</title>
+
+  <!-- ✅ Link ke file CSS eksternal -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <h1>Daftar Anggota Kelompok</h1>
 
-<div id="daftar-anggota">
-  <a href="farkhan.html" class="glow-button">Farkhan Ramdani</a>
-  <a href="ilham.html" class="glow-button">M. Ilham Saifa R</a>
-  <a href="reza.html" class="glow-button">M. Kenar Alva Reza</a>
-  <a href="dani.html" class="glow-button">M. Dani Saputra</a>
-  <a href="frandy.html" class="glow-button">Frandy Hermawan</a>
-  <a href="nazril.html" class="glow-button">Nazril Ilham Maulana</a>
-  <a href="rizki.html" class="glow-button">Rizki Awal Ramadhani</a>
-  <a href="rafi.html" class="glow-button">Akhmad Ibnu Rafi</a>
-</div>
-
-  <div id="foto-container"></div>
-
-  <div id="tentangKami" style="display: none;">
-    <p>Website ini dibuat oleh kelompok kreatif dengan semangat kolaborasi dan desain neon futuristik. Kami percaya kerja tim adalah kunci keberhasilan. ❤</p>
+  <div id="daftar-anggota">
+    <button class="glow-button" onclick="location.href='farkhan.html'">Farkhan Ramdani</button>
+    <button class="glow-button" onclick="location.href='ilham.html'">M. Ilham Saifa R</button>
+    <button class="glow-button" onclick="location.href='reza.html'">M. Kenar Alva Reza</button>
+    <button class="glow-button" onclick="location.href='dani.html'">M. Dani Saputra</button>
+    <button class="glow-button" onclick="location.href='frandy.html'">Frandy Hermawan</button>
+    <button class="glow-button" onclick="location.href='nazril.html'">Nazril Ilham Maulana</button>
+    <button class="glow-button" onclick="location.href='rizki.html'">Rizki Awal Ramadani</button>
+    <button class="glow-button" onclick="location.href='rafi.html'">Akhmad Ibnu Rafi</button>
   </div>
 
   <hr />
-  <div class="footer">© Farkhan Ramdani ❤</div>
 
-  <script>
-    function showFoto(foto) {
-      document.getElementById("tentangKami").style.display = "none";
-      document.getElementById("foto-container").innerHTML = `<img src="img/${foto}" alt="Foto" style="margin-top:20px;max-width:90%;border-radius:10px;box-shadow:0 0 20px cyan;">`;
-    }
+  <div id="tentangKami">
+    <h2>Tentang Kami</h2>
+    <p>Kami adalah kelompok kreatif yang berkolaborasi membuat website interaktif bertema neon kota gelap. Tiap anggota punya halaman masing-masing!</p>
+  </div>
 
-    function toggleTentangKami() {
-      const tentang = document.getElementById("tentangKami");
-      const fotoContainer = document.getElementById("foto-container");
-      fotoContainer.innerHTML = "";
-      tentang.style.display = tentang.style.display === "none" ? "block" : "none";
-    }
-  </script>
+  <footer>
+    <p>© Farkhan Ramdani ❤</p>
+  </footer>
+
 </body>
 </html>
