@@ -1,104 +1,47 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kelompok</title>
-  <style>
-    body {
-      background-color: #000;
-      color: white;
-      text-align: center;
-      font-family: Arial, sans-serif;
-    }
-
-    h1 {
-      margin-top: 40px;
-      margin-bottom: 30px;
-      text-shadow: 0 0 10px #0ff;
-    }
-
-    .glow-button {
-      background: transparent;
-      border: 2px solid #0ff;
-      color: #0ff;
-      padding: 10px 15px;
-      margin: 10px;
-      border-radius: 10px;
-      font-size: 14px;
-      cursor: pointer;
-      box-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
-      transition: all 0.3s ease;
-    }
-
-    .glow-button:hover {
-      background-color: #0ff;
-      color: #000;
-      box-shadow: 0 0 20px #0ff, 0 0 30px #0ff;
-    }
-
-    .footer {
-      text-align: center;
-      font-size: 1rem;
-      color: #ff00cc;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      text-shadow: 0 0 5px #ff00cc, 0 0 10px #ff00cc;
-    }
-
-    #tentangKami {
-      margin-top: 30px;
-      color: #0ff;
-      font-size: 1.1rem;
-    }
-
-    hr {
-      margin: 60px auto 20px;
-      width: 60%;
-      height: 2px;
-      background: #0ff;
-      border: none;
-      box-shadow: 0 0 15px #0ff;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <h1>Daftar Anggota Kelompok</h1>
 
-  <h1>Kelompok</h1>
-
-  <!-- Tombol Anggota -->
   <div id="daftar-anggota">
-    <button class="glow-button" onclick="location.href='farkhan.html'">Farkhan Ramdani</button>
-    <button class="glow-button" onclick="location.href='ilham.html'">M. Ilham Saifa R</button>
-    <button class="glow-button" onclick="location.href='kenar.html'">M. Kenar Alva Reza</button>
-    <button class="glow-button" onclick="location.href='dani.html'">M. Dani Saputra</button>
-    <button class="glow-button" onclick="location.href='frandy.html'">Frandy Hermawan</button>
-    <button class="glow-button" onclick="location.href='nazril.html'">Nazril Ilham Maulana</button>
-    <button class="glow-button" onclick="location.href='rizki.html'">Rizki Awal Ramadhani</button>
-    <button class="glow-button" onclick="location.href='rafi.html'">Akhmad Ibnu Rafi</button>
-    <button class="glow-button" onclick="toggleTentang()">Tentang Kami</button>
+    <button class="glow-button" onclick="showFoto('farkhan.jpg')">Farkhan Ramdani</button>
+    <button class="glow-button" onclick="showFoto('ilham.jpg')">M. Ilham Saifa R</button>
+    <button class="glow-button" onclick="showFoto('kenar.jpg')">M. Kenar Alva Reza</button>
+    <button class="glow-button" onclick="showFoto('dani.jpg')">M. Dani Saputra</button>
+    <button class="glow-button" onclick="showFoto('frandy.jpg')">Frandy Hermawan</button>
+    <button class="glow-button" onclick="showFoto('nazril.jpg')">Nazril Ilham Maulana</button>
+    <button class="glow-button" onclick="showFoto('rizki.jpg')">Rizki Awal Ramadhani</button>
+    <button class="glow-button" onclick="showFoto('rafi.jpg')">Akhmad Ibnu Rafi</button>
+    <button class="glow-button" onclick="toggleTentangKami()">Tentang Kami</button>
   </div>
 
-  <!-- Konten Tentang Kami -->
-  <div id="tentangKami" style="display:none;">
-    <p>Kami adalah kelompok kreatif yang saling mendukung dan berkembang bersama untuk menyelesaikan proyek ini dengan semangat dan kerja sama.</p>
+  <div id="foto-container"></div>
+
+  <div id="tentangKami" style="display: none;">
+    <p>Website ini dibuat oleh kelompok kreatif dengan semangat kolaborasi dan desain neon futuristik. Kami percaya kerja tim adalah kunci keberhasilan. ❤</p>
   </div>
 
-  <!-- Garis pemisah -->
-  <hr>
+  <hr />
+  <div class="footer">© Farkhan Ramdani ❤</div>
 
-  <!-- Footer -->
-  <div class="footer">
-    © Farkhan Ramdani ❤
-  </div>
-
-  <!-- Script -->
   <script>
-    function toggleTentang() {
+    function showFoto(foto) {
+      document.getElementById("tentangKami").style.display = "none";
+      document.getElementById("foto-container").innerHTML = `<img src="img/${foto}" alt="Foto" style="margin-top:20px;max-width:90%;border-radius:10px;box-shadow:0 0 20px cyan;">`;
+    }
+
+    function toggleTentangKami() {
       const tentang = document.getElementById("tentangKami");
+      const fotoContainer = document.getElementById("foto-container");
+      fotoContainer.innerHTML = "";
       tentang.style.display = tentang.style.display === "none" ? "block" : "none";
     }
   </script>
-
 </body>
 </html>
