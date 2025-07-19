@@ -1,53 +1,48 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>XII TJKT 3 - Cara Hosting Web</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XII TJKT 3</title>
   <style>
+    /* Import font */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
     body {
       margin: 0;
+      padding: 0;
       font-family: 'Orbitron', sans-serif;
-      background: radial-gradient(circle, #0f0c29, #302b63, #24243e);
-      color: #00f7ff;
+      background-image: url('https://images.unsplash.com/photo-1606761568499-6b6b68e982c7?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #fff;
       text-align: center;
-      overflow-x: hidden;
-    }
-
-    header {
-      padding: 50px 20px 20px;
+      animation: fadeIn 2s ease-in;
     }
 
     h1 {
-      font-size: 3.5em;
-      text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
-      animation: flicker 2s infinite;
-    }
-
-    @keyframes flicker {
-      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-        opacity: 1;
-      }
-      20%, 24%, 55% {
-        opacity: 0.3;
-      }
+      font-size: 3em;
+      color: #ff00ff;
+      text-shadow: 0 0 10px #ff00ff, 0 0 30px #00ffff;
+      margin-top: 40px;
+      animation: pulse 2s infinite;
     }
 
     p {
-      font-size: 1.4em;
-      color: #aaaaff;
-      margin-top: 10px;
+      font-size: 1.2em;
+      color: #00ffe7;
+      text-shadow: 0 0 5px #00ffcc;
     }
 
     img {
-      width: 250px;
-      height: 250px;
+      width: 240px;
+      height: 240px;
       object-fit: cover;
-      margin: 30px auto;
-      display: block;
       border-radius: 20px;
       box-shadow: 0 0 20px #00f7ff, 0 0 40px #00f7ff;
+      margin: 20px auto;
+      display: block;
       animation: float 4s ease-in-out infinite;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -57,86 +52,84 @@
       box-shadow: 0 0 30px #00f7ff, 0 0 60px #00f7ff;
     }
 
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-
-    h2 {
-      margin-top: 40px;
-      color: #00f7ff;
-      text-shadow: 0 0 10px #00f7ff;
-    }
-
     ul {
       list-style: none;
       padding: 0;
-      margin: 30px auto;
-      max-width: 500px;
+      max-width: 600px;
+      margin: auto;
     }
 
     li {
+      margin: 15px;
+      padding: 15px 25px;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid transparent;
+      color: white;
+      font-size: 1.2em;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #ff00e1;
+      transition: all 0.4s ease;
+      cursor: pointer;
       opacity: 0;
-      background-color: rgba(0, 247, 255, 0.1);
-      margin: 10px auto;
-      max-width: 400px;
-      padding: 12px;
-      border-radius: 10px;
-      border: 1px solid #00f7ff;
-      box-shadow: 0 0 10px #00f7ff;
-      transition: opacity 1s ease, transform 0.3s ease;
+      transform: translateX(-50px);
     }
 
     li:hover {
+      background: rgba(255, 255, 255, 0.1);
       transform: scale(1.05);
-      box-shadow: 0 0 20px #00f7ff;
+      border-left: 4px solid #00ffe7;
+      box-shadow: 0 0 25px #ff00ff, 0 0 40px #00ffff;
     }
 
-    footer {
-      margin-top: 50px;
-      color: #888;
-      font-size: 0.9em;
-      padding-bottom: 20px;
+    /* Animations */
+    @keyframes pulse {
+      0%, 100% { text-shadow: 0 0 10px #ff00ff, 0 0 30px #00ffff; }
+      50% { text-shadow: 0 0 20px #00ffcc, 0 0 40px #ff00ff; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>XII TJKT 3</h1>
-    <p>Cara Hosting Web</p>
-    <img src="IMG-20250719-WA0007.jpg" alt="Foto Kelompok XII TJKT 3" />
-  </header>
 
-  <main>
-    <h2>Anggota Kelompok</h2>
-    <ul id="anggota-list">
-      <li>Farkhan Ramdani</li>
-      <li>M. Dhany Saputra</li>
-      <li>Akhmad Ibnu Rafi</li>
-      <li>Nazril Ilham Maulana</li>
-      <li>M. Kenar Alva Reza</li>
-      <li>Ilham Saifa Rohim</li>
-      <li>Frandy Hermawan</li>
-      <li>Rizki Awal Ramadhani</li>
-    </ul>
-  </main>
+  <h1>XII TJKT 3</h1>
+  <p>Cara Hosting Web</p>
 
-  <footer>
-    &copy; 2025 XII TJKT 3 | Hosted on GitHub Pages
-  </footer>
+  <img src="IMG-20250719-WA0007.jpg" alt="Foto Kelompok"/>
+
+  <ul id="anggota">
+    <li onclick="showInfo('Farkhan Ramdani', 'Ketua Kelompok')">Farkhan Ramdani</li>
+    <li onclick="showInfo('M. Dhany Saputra', 'Dokumentasi')">M. Dhany Saputra</li>
+    <li onclick="showInfo('Akhmad Ibnu Rafi', 'Front-End Developer')">Akhmad Ibnu Rafi</li>
+    <li onclick="showInfo('Nazril Ilham Maulana', 'Desain UI/UX')">Nazril Ilham Maulana</li>
+    <li onclick="showInfo('M. Kenar Alva Reza', 'Back-End Developer')">M. Kenar Alva Reza</li>
+    <li onclick="showInfo('Ilham Saifa Rohim', 'Deployment & Hosting')">Ilham Saifa Rohim</li>
+    <li onclick="showInfo('Frandy Hermawan', 'QA Tester')">Frandy Hermawan</li>
+    <li onclick="showInfo('Rizki Awal Ramadhani', 'Support')">Rizki Awal Ramadhani</li>
+  </ul>
 
   <script>
-    // Animasi fade-in anggota satu per satu
-    const anggota = document.querySelectorAll("#anggota-list li");
+    // Efek muncul satu-satu
+    const anggota = document.querySelectorAll("#anggota li");
     anggota.forEach((item, index) => {
       setTimeout(() => {
         item.style.opacity = 1;
-      }, index * 400);
+        item.style.transform = "translateX(0)";
+      }, index * 250);
     });
+
+    // Info interaktif saat klik nama
+    function showInfo(nama, tugas) {
+      alert(`Nama: ${nama}\nTugas: ${tugas}`);
+    }
   </script>
 </body>
 </html>
