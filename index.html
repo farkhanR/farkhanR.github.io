@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Kelompok Neon</title>
   <style>
-    /* Global Reset */
     * {
       margin: 0;
       padding: 0;
@@ -13,8 +12,7 @@
     }
 
     body {
-      background: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
-      background-size: cover;
+      background-color: #000; /* Background hitam */
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -83,16 +81,27 @@
       color: #ccc;
       font-size: 0.9rem;
       text-shadow: 0 0 5px #0ff;
+      text-align: center;
+    }
+
+    .courtesy {
+      color: #ff66c4;
+      margin-top: 5px;
+      font-weight: bold;
+      text-shadow: 0 0 10px #ff66c4, 0 0 20px #ff66c4;
     }
   </style>
 </head>
 <body>
   <h1>Kelompok Neon Kreatif</h1>
   <div class="button-container" id="buttonContainer">
-    <!-- Tombol akan ditambahkan dengan JavaScript -->
+    <!-- Tombol akan muncul dari JS -->
   </div>
 
-  <footer>&copy; 2025 - Tim Neon</footer>
+  <footer>
+    &copy; 2025 - Tim Neon <br />
+    <div class="courtesy">Courtesy: Farkhan ❤</div>
+  </footer>
 
   <script>
     const anggota = [
