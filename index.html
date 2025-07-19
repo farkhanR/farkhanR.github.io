@@ -2,52 +2,63 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kelompok</title>
   <style>
     body {
       background-color: #000;
       color: white;
       text-align: center;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      margin-top: 40px;
+      margin-bottom: 30px;
+      text-shadow: 0 0 10px #0ff;
     }
 
     .glow-button {
-      margin: 20px;
-      padding: 15px 30px;
-      font-size: 1rem;
-      color: white;
       background: transparent;
       border: 2px solid #0ff;
+      color: #0ff;
+      padding: 10px 15px;
+      margin: 10px;
       border-radius: 10px;
+      font-size: 14px;
       cursor: pointer;
-      text-shadow: 0 0 10px #0ff;
-      box-shadow: 0 0 10px #0ff, 0 0 20px #00f;
-      transition: 0.3s;
+      box-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+      transition: all 0.3s ease;
     }
 
     .glow-button:hover {
-      background-color: #0ff2;
+      background-color: #0ff;
+      color: #000;
+      box-shadow: 0 0 20px #0ff, 0 0 30px #0ff;
     }
 
-    .tentang-kami {
-      display: none;
+    .footer {
+      text-align: center;
+      font-size: 1rem;
+      color: #ff00cc;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 5px #ff00cc, 0 0 10px #ff00cc;
+    }
+
+    #tentangKami {
       margin-top: 30px;
-      padding: 20px;
       color: #0ff;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      font-size: 1.1rem;
     }
 
     hr {
-      border: 1px solid #444;
-      width: 50%;
-      margin: 20px auto;
+      margin: 60px auto 20px;
+      width: 60%;
+      height: 2px;
+      background: #0ff;
+      border: none;
+      box-shadow: 0 0 15px #0ff;
     }
   </style>
 </head>
@@ -55,43 +66,39 @@
 
   <h1>Daftar Anggota Kelompok</h1>
 
-  <!-- Tombol anggota -->
-  <button class="glow-button">Farkhan Ramdani</button>
-  <button class="glow-button">M. Ilham Saifa R</button>
-  <button class="glow-button">M. Kenar Alva Reza</button>
-  <button class="glow-button">M. Dani Saputra</button>
-  <button class="glow-button">Frandy Hermawan</button>
-  <button class="glow-button">Nazril Ilham Maulana</button>
-  <button class="glow-button">Rizki Awal Ramadhani</button>
-  <button class="glow-button">Akhmad Ibnu Rafi</button>
-
-  <!-- Tombol Tentang Kami -->
-  <button class="glow-button" onclick="toggleTentangKami()">Tentang Kami</button>
-
-  <!-- Konten Tentang Kami -->
-  <div id="tentangKami" class="tentang-kami">
-    <hr />
-    <p>Kami adalah kelompok kreatif yang saling mendukung, berbagi ide, dan bekerja sama untuk membuat proyek penuh warna dan semangat! 🔥🔥🔥</p>
+  <!-- Tombol Anggota -->
+  <div id="daftar-anggota">
+    <button class="glow-button" onclick="location.href='farkhan.html'">Farkhan Ramdani</button>
+    <button class="glow-button" onclick="location.href='ilham.html'">M. Ilham Saifa R</button>
+    <button class="glow-button" onclick="location.href='kenar.html'">M. Kenar Alva Reza</button>
+    <button class="glow-button" onclick="location.href='dani.html'">M. Dani Saputra</button>
+    <button class="glow-button" onclick="location.href='frandy.html'">Frandy Hermawan</button>
+    <button class="glow-button" onclick="location.href='nazril.html'">Nazril Ilham Maulana</button>
+    <button class="glow-button" onclick="location.href='rizki.html'">Rizki Awal Ramadhani</button>
+    <button class="glow-button" onclick="location.href='rafi.html'">Akhmad Ibnu Rafi</button>
+    <button class="glow-button" onclick="toggleTentang()">Tentang Kami</button>
   </div>
 
-  <!-- Script interaktif -->
+  <!-- Konten Tentang Kami -->
+  <div id="tentangKami" style="display:none;">
+    <p>Kami adalah kelompok kreatif yang saling mendukung dan berkembang bersama untuk menyelesaikan proyek ini dengan semangat dan kerja sama.</p>
+  </div>
+
+  <!-- Garis pemisah -->
+  <hr>
+
+  <!-- Footer -->
+  <div class="footer">
+    © Farkhan Ramdani ❤
+  </div>
+
+  <!-- Script -->
   <script>
-    function toggleTentangKami() {
+    function toggleTentang() {
       const tentang = document.getElementById("tentangKami");
-      if (tentang.style.display === "none" || tentang.style.display === "") {
-        tentang.style.display = "block";
-      } else {
-        tentang.style.display = "none";
-      }
+      tentang.style.display = tentang.style.display === "none" ? "block" : "none";
     }
   </script>
-  
-<!-- Garis Pemisah -->
-<hr style="margin-top: 40px; border: none; height: 2px; background: #0ff; width: 60%; box-shadow: 0 0 10px #0ff;">
 
-<!-- Footer -->
-<footer style="margin-top: 20px; color: #aaa; font-size: 0.9rem;">
-  © Farkhan Ramdani ❤
-</footer>
 </body>
 </html>
