@@ -1,94 +1,105 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GiftHub - Kelompok Neon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XII TJKT 3 - Neon City</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
-      background: url('https://images.unsplash.com/photo-1534943561501-eda0c2a15449?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1549921296-3a9b8b3fc9d3?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
       text-align: center;
-      overflow-x: hidden;
+      padding: 20px;
     }h1 {
-  margin-top: 40px;
-  font-size: 3.5em;
-  text-shadow: 0 0 10px #0ff, 0 0 20px #ff0, 0 0 30px #f0f;
+  font-size: 3em;
+  color: #ff00ff;
+  text-shadow: 0 0 15px #00ffff, 0 0 40px #ff00ff;
+  animation: glow 3s ease-in-out infinite;
 }
 
-.team-photo {
-  width: 320px;
-  margin: 20px auto;
-  border: 4px solid #0ff;
+p {
+  font-size: 1.2em;
+  color: #00ffee;
+  text-shadow: 0 0 5px #00ffcc;
+}
+
+img.foto {
+  width: 220px;
+  height: 220px;
   border-radius: 20px;
-  box-shadow: 0 0 20px #0ff;
+  object-fit: cover;
+  box-shadow: 0 0 20px #00f7ff, 0 0 40px #ff00ff;
+  margin: 20px auto;
+  display: block;
+  animation: float 5s ease-in-out infinite;
 }
 
 .button-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
 }
 
-.glow-button {
-  background-color: transparent;
-  border: 2px solid;
+.btn {
+  background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
-  padding: 12px 30px;
-  margin: 10px;
-  border-radius: 30px;
-  font-size: 1.3em;
-  cursor: pointer;
-  text-shadow: 0 0 5px #fff;
-  box-shadow: 0 0 10px #0ff, 0 0 20px #f0f, 0 0 30px #ff0;
-  transition: transform 0.3s ease, opacity 0.5s ease;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: neon-glow 2s infinite alternate;
+  padding: 15px 25px;
+  border: 2px solid #00ffff;
+  border-radius: 15px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00ffff;
 }
 
-.glow-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+.btn:hover {
+  background-color: #00ffff;
+  color: #000;
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
   transform: scale(1.1);
 }
 
-.glow-button.show {
-  opacity: 1;
-  transform: translateY(0);
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
-@keyframes neon-glow {
-  from {
-    box-shadow: 0 0 10px #0ff, 0 0 20px #f0f, 0 0 30px #ff0;
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 15px #00ffff, 0 0 40px #ff00ff;
   }
-  to {
-    box-shadow: 0 0 20px #0ff, 0 0 30px #f0f, 0 0 40px #ff0;
+  50% {
+    text-shadow: 0 0 30px #ff00ff, 0 0 60px #00ffcc;
   }
 }
 
   </style>
 </head>
 <body>
-  <h1>GiftHub - Tim Neon</h1>
-  <img src="IMG-20250719-WA0007.jpg" alt="Team Photo" class="team-photo">
-  <div class="button-container" id="buttons">
-    <a href="./farkhan.html" class="glow-button">Farkhan</a>
-    <a href="./ilham.html" class="glow-button">Ilham</a>
-    <a href="./reza.html" class="glow-button">Reza</a>
-    <a href="./dani.html" class="glow-button">Dani</a>
-    <a href="./frandy.html" class="glow-button">Frandy</a>
-    <a href="./nazril.html" class="glow-button">Nazril</a>
-    <a href="./rizki.html" class="glow-button">Rizki</a>
+  <h1>XII TJKT 3</h1>
+  <p>Cara Hosting Web</p>
+  <img src="IMG-20250719-WA0007.jpg" class="foto" alt="Foto kelompok">  <div class="button-container">
+    <a href="farkhan.html" class="btn">Farkhan Ramdani</a>
+    <a href="dhany.html" class="btn">M. Dhany Saputra</a>
+    <a href="ibnu.html" class="btn">Akhmad Ibnu Rafi</a>
+    <a href="nazril.html" class="btn">Nazril Ilham Maulana</a>
+    <a href="kenar.html" class="btn">M. Kenar Alva Reza</a>
+    <a href="ilham.html" class="btn">Ilham Saifa Rohim</a>
+    <a href="frandy.html" class="btn">Frandy Hermawan</a>
+    <a href="rizki.html" class="btn">Rizki Awal Ramadhani</a>
   </div>  <script>
-    const buttons = document.querySelectorAll('.glow-button');
-    buttons.forEach((btn, i) => {
-      setTimeout(() => {
-        btn.classList.add('show');
-      }, 300 * i);
+    // Animasi tambahan saat tombol diklik
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.style.boxShadow = '0 0 50px #ff00ff';
+        btn.style.transition = '0.1s';
+      });
     });
   </script></body>
 </html>
