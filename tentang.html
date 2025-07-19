@@ -2,27 +2,25 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tentang Kami</title>
   <style>
     body {
       background-color: #000;
-      color: #00ffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #0ff;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
     }
 
     h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
+      font-size: 2.5em;
       text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
       animation: glow 2s ease-in-out infinite alternate;
+      margin-bottom: 20px;
     }
 
     @keyframes glow {
@@ -35,39 +33,44 @@
     }
 
     .container {
-      max-width: 800px;
-      padding: 20px;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 20px;
+      line-height: 1.5;
     }
 
     .anggota {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      display: flex;
+      flex-direction: column;
       gap: 15px;
-      margin-top: 30px;
     }
 
     .anggota div {
       background-color: rgba(0, 255, 255, 0.1);
-      padding: 12px;
       border: 1px solid #0ff;
       border-radius: 10px;
+      padding: 12px;
       box-shadow: 0 0 10px #0ff;
-      transition: 0.3s ease;
+      transition: 0.3s;
     }
 
     .anggota div:hover {
       background-color: rgba(0, 255, 255, 0.2);
-      transform: scale(1.05);
+      transform: scale(1.02);
     }
 
     a.kembali {
-      margin-top: 40px;
+      margin-top: 30px;
+      display: inline-block;
+      padding: 10px 20px;
+      border: 1px solid #0ff;
+      border-radius: 8px;
       color: #0ff;
       text-decoration: none;
-      font-size: 1em;
-      border: 1px solid #0ff;
-      padding: 10px 20px;
-      border-radius: 8px;
       box-shadow: 0 0 10px #0ff;
       transition: 0.3s;
     }
@@ -78,9 +81,9 @@
     }
 
     footer {
-      margin-top: 60px;
-      font-size: 0.9em;
+      margin-top: 40px;
       color: #888;
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -90,7 +93,7 @@
 
   <div class="container">
     <p>
-      Kami adalah kelompok kreatif beranggotakan 8 orang yang antusias dengan desain, teknologi, dan karya digital. Kami percaya bahwa kolaborasi dan kreativitas dapat menciptakan hal-hal luar biasa.
+      Kami adalah kelompok kreatif yang bekerja sama membuat website dengan tema neon interaktif dan penuh semangat kolaborasi.
     </p>
 
     <div class="anggota">
@@ -103,9 +106,9 @@
       <div>Rizki Awal Ramadhani</div>
       <div>Akhmad Ibnu Rafi</div>
     </div>
-  </div>
 
-  <a href="index.html" class="kembali">← Kembali ke Beranda</a>
+    <a href="index.html" class="kembali">← Kembali</a>
+  </div>
 
   <footer>© Farkhan Ramdani ❤</footer>
 
