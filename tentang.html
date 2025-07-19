@@ -9,7 +9,7 @@
       background-color: #000;
       color: #0ff;
       font-family: 'Segoe UI', sans-serif;
-      padding: 20px;
+      padding: 0;
       margin: 0;
       display: flex;
       flex-direction: column;
@@ -21,23 +21,25 @@
 
     .container {
       max-width: 90%;
+      padding: 40px 20px;
       margin-top: 60px;
     }
 
     h1 {
       font-size: 2em;
-      margin-bottom: 40px; /* Tambahin jarak lebih besar dari sebelumnya */
+      margin-bottom: 25px;
       text-shadow: 0 0 10px #0ff;
     }
 
-    p {
-      font-size: 1.2em;
+    .about-text {
+      font-size: 1.1em;
       line-height: 1.8;
-      margin-bottom: 40px;
       white-space: pre-line;
+      text-shadow: 0 0 5px #0ff;
     }
 
     a {
+      display: inline-block;
       color: #0ff;
       font-size: 1em;
       text-decoration: none;
@@ -46,6 +48,7 @@
       border-radius: 8px;
       transition: background 0.3s, color 0.3s;
       text-shadow: 0 0 5px #0ff;
+      margin-top: 40px;
     }
 
     a:hover {
@@ -57,17 +60,16 @@
 <body>
   <div class="container">
     <h1>Tentang Kami</h1>
-    <p>
-      Kami adalah sekelompok <strong>manusia tangguh</strong> yang<br>
-      Dipersatukan bukan oleh <strong>takdir</strong>,<br>
-      tapi oleh <strong>tugas kelompok</strong> yang gak bisa ditolak.<br><br>
 
-      Kami punya satu prinsip:<br>
-      <strong>Yang penting kompak, hasil belakangan.</strong><br><br>
+    <div class="about-text">
+Kami adalah sekelompok manusia tangguh yang
+Dipersatukan bukan oleh takdir, tapi oleh tugas kelompok yang gak bisa ditolak.
 
-      Kalau website ini bisa jalan,<br>
-      berarti <strong>teamwork</strong> kami berhasil... 🔥🔥🔥
-    </p>
+Kami punya satu prinsip: yang penting kompak, hasil belakangan.
+
+Kalau website ini bisa jalan, berarti teamwork kami berhasil... 🔥🔥🔥
+    </div>
+
     <a href="index.html">← Kembali ke Beranda</a>
   </div>
 </body>
