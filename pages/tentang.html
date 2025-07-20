@@ -1,75 +1,78 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tentang Kami</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      background-color: #000;
-      color: #0ff;
-      font-family: 'Segoe UI', sans-serif;
-      padding: 0;
       margin: 0;
+      padding: 0;
+      background-color: black;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
+      justify-content: center;
+      height: 100vh;
       text-align: center;
     }
 
-    .container {
-      max-width: 90%;
-      padding: 40px 20px;
-      margin-top: 60px;
-    }
-
     h1 {
-      font-size: 2em;
-      margin-bottom: 25px;
-      text-shadow: 0 0 10px #0ff;
-    }
-
-    .about-text {
-      font-size: 1.1em;
-      line-height: 1.8;
-      white-space: pre-line;
-      text-shadow: 0 0 5px #0ff;
-    }
-
-    a {
-      display: inline-block;
+      font-size: 2.2em;
       color: #0ff;
-      font-size: 1em;
-      text-decoration: none;
-      border: 1px solid #0ff;
-      padding: 10px 20px;
-      border-radius: 8px;
-      transition: background 0.3s, color 0.3s;
-      text-shadow: 0 0 5px #0ff;
-      margin-top: 40px;
+      text-shadow: 0 0 15px #0ff;
+      margin-bottom: 20px;
     }
 
-    a:hover {
+    .isi-tentang {
+      max-width: 600px;
+      padding: 20px;
+      line-height: 1.6;
+      color: #fff;
+      font-size: 1.1em;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 0 15px #0ff;
+    }
+
+    .isi-tentang p {
+      margin: 10px 0;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
       background-color: #0ff;
-      color: #000;
+      color: black;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px #0ff;
+      transition: 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #fff;
+      box-shadow: 0 0 20px #0ff;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Tentang Kami</h1>
+  <h1>Tentang Kami</h1>
 
-    <div class="about-text">
-Kami adalah sekelompok orang gila yang Dipersatukan bukan oleh takdir, tapi oleh tugas kelompok yang gak bisa ditolak.
+  <div class="isi-tentang">
+Kami adalah sekelompok manusia tangguh yang  
+Dipersatukan bukan oleh takdir, tapi oleh tugas kelompok yang gak bisa ditolak.
 
 Kami punya satu prinsip: yang penting kompak, hasil belakangan.
 
 Kalau website ini bisa jalan, berarti teamwork kami berhasil... 🔥🔥🔥
-    </div>
-
-    <a href="index.html">← Kembali ke Beranda</a>
   </div>
+
+  <a href="../index.html" class="back-button">Kembali ke Halaman Utama</a>
 </body>
 </html>
