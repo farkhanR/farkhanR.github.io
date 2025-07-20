@@ -61,3 +61,12 @@ footer {
   color: #888;
   font-size: 0.9rem;
 }
+
+.spacer-line {
+  width: 80%;
+  height: 2px;
+  margin: 50px auto 30px auto;
+  background: linear-gradient(to right, #0ff, #f0f, #0ff);
+  box-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
+  border-radius: 5px;
+}
