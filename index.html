@@ -1,35 +1,102 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kelompok Kreatif</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kelompok</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-align: center;
+    }
 
-  <!-- ✅ Link ke file CSS eksternal -->
-  <link rel="stylesheet" href="style.css" />
+    h1 {
+      margin-top: 40px;
+      font-size: 3em;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    .button-container {
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .glow-button {
+      padding: 15px 25px;
+      border: none;
+      border-radius: 12px;
+      background-color: #111;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 0 10px #0ff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.7s ease forwards;
+      opacity: 0;
+    }
+
+    .glow-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #0ff;
+    }
+
+    .glow-button:nth-child(1) { animation-delay: 0.2s; }
+    .glow-button:nth-child(2) { animation-delay: 0.4s; }
+    .glow-button:nth-child(3) { animation-delay: 0.6s; }
+    .glow-button:nth-child(4) { animation-delay: 0.8s; }
+    .glow-button:nth-child(5) { animation-delay: 1s; }
+    .glow-button:nth-child(6) { animation-delay: 1.2s; }
+    .glow-button:nth-child(7) { animation-delay: 1.4s; }
+    .glow-button:nth-child(8) { animation-delay: 1.6s; }
+    .glow-button:nth-child(9) { animation-delay: 1.8s; }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .footer {
+      margin-top: 80px;
+      padding: 20px;
+      font-size: 14px;
+      color: #999;
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Daftar Anggota Kelompok</h1>
+  <h1>Kelompok</h1>
 
-  <div id="daftar-anggota">
-    <button class="glow-button" onclick="location.href='farkhan.html'">Farkhan Ramdani</button>
-    <button class="glow-button" onclick="location.href='ilham.html'">M. Ilham Saifa R</button>
-    <button class="glow-button" onclick="location.href='reza.html'">M. Kenar Alva Reza</button>
-    <button class="glow-button" onclick="location.href='dani.html'">M. Dani Saputra</button>
-    <button class="glow-button" onclick="location.href='frandy.html'">Frandy Hermawan</button>
-    <button class="glow-button" onclick="location.href='nazril.html'">Nazril Ilham Maulana</button>
-    <button class="glow-button" onclick="location.href='rizki.html'">Rizki Awal Ramadani</button>
-    <button class="glow-button" onclick="location.href='rafi.html'">Akhmad Ibnu Rafi</button>
+  <div class="button-container">
+    <a href="pages/farkhan.html" class="glow-button">Farkhan Ramdani</a>
+    <a href="pages/ilham.html" class="glow-button">M. Ilham Saifa R</a>
+    <a href="pages/reza.html" class="glow-button">M. Kenar Alva Reza</a>
+    <a href="pages/dani.html" class="glow-button">M. Dani Saputra</a>
+    <a href="pages/frandy.html" class="glow-button">Frandy Hermawan</a>
+    <a href="pages/nazril.html" class="glow-button">Nazril Ilham Maulana</a>
+    <a href="pages/rizki.html" class="glow-button">Rizki Awal Ramadhani</a>
+    <a href="pages/rafi.html" class="glow-button">Akhmad Ibnu Rafi</a>
+    <a href="pages/tentang.html" class="glow-button">Tentang Kami</a>
   </div>
 
-  <hr />
-
-    <a href="tentang.html" class="glow-button">Tentang Kami</a>
-
-  <footer>
-    <p>© Farkhan Ramdani ❤</p>
-  </footer>
+  <div class="footer">
+    © Farkhan Ramdani ❤
+  </div>
 
 </body>
 </html>
