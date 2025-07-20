@@ -3,51 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>M. Dhany Saputra</title>
+  <title>Halaman Dani</title>
+  <link rel="stylesheet" href="../style.css" />
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-image: url('../img/bg-kl.jpg');
+      background-image: url("../img/bg-kl.jpg");
       background-size: cover;
       background-position: center;
-      font-family: Arial, sans-serif;
-      color: #fff;
+      font-family: 'Arial', sans-serif;
+      color: white;
       text-align: center;
     }
+
     .container {
-      margin-top: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
     }
-    img {
-      width: 300px;
+
+    .photo {
+      max-width: 90%;
       height: auto;
       border-radius: 20px;
-      box-shadow: 0 0 25px #00f7ff;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+      margin-bottom: 30px;
     }
-    a.kembali {
+
+    .back-button {
+      margin-top: 20px;
+    }
+
+    .back-button a {
       display: inline-block;
-      margin-top: 40px;
-      padding: 12px 25px;
-      background-color: #0ff;
-      color: #000;
-      text-decoration: none;
+      padding: 12px 24px;
+      background-color: rgba(0, 255, 255, 0.2);
+      border: 2px solid cyan;
       border-radius: 30px;
+      color: white;
+      text-decoration: none;
       font-weight: bold;
-      box-shadow: 0 0 15px #0ff;
-      transition: 0.3s ease;
+      transition: 0.3s;
     }
-    a.kembali:hover {
-      background-color: #00c2c2;
-      box-shadow: 0 0 25px #00c2c2;
+
+    .back-button a:hover {
+      background-color: cyan;
+      color: black;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>M. Dhany Saputra</h1>
-    <img src="../img/dhany.jpg" alt="Foto Dhany" />
-    <br />
-    <a href="../index.html" class="kembali">← Kembali ke Beranda</a>
+    <img src="../img/dani.jpg" alt="Foto Dani" class="photo" />
+    <div class="back-button">
+      <a href="../index.html">← Kembali ke Halaman Utama</a>
+    </div>
   </div>
 </body>
 </html>
