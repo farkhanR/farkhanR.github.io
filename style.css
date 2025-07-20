@@ -1,105 +1,81 @@
-/* File: style.css */
-body {
+/* File: css/style.css */
+body.main-background {
   margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: url('img/bg-city.jpg') no-repeat center center fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('../img/bg-kl.jpg') no-repeat center center fixed;
   background-size: cover;
-  color: #fff;
+  color: white;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
   text-align: center;
+  border-bottom: 2px solid white;
 }
 
 h1 {
-  font-size: 3rem;
-  margin-top: 40px;
-  color: #0ff;
-  text-shadow: 0 0 10px #0ff;
+  font-size: 2.5em;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
 }
 
-.button-container {
-  margin: 50px auto;
+nav ul.nav-buttons {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 
-button {
+nav ul.nav-buttons li a {
+  text-decoration: none;
+  padding: 10px 20px;
   background: transparent;
   border: 2px solid #fff;
+  color: white;
   border-radius: 10px;
-  padding: 10px 20px;
-  color: #fff;
-  font-size: 1.2rem;
-  cursor: pointer;
   transition: 0.3s;
+  font-weight: bold;
   box-shadow: 0 0 10px #fff;
 }
 
-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 15px #0ff, 0 0 25px #0ff;
-  transform: scale(1.05);
-}
-
-a {
-  text-decoration: none;
-}
-
-hr {
-  margin: 40px auto;
-  width: 60%;
-  border: 1px solid #444;
-}
-
-footer {
-  margin: 40px 0 20px;
-  font-size: 1rem;
-  color: #aaa;
-}
-
-/* Umum */
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #000; /* latar hitam */
-  color: #fff;
-}
-
-/* Tombol */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn-tentang {
-  color: white;
-  border: 2px solid white;
-  background-color: transparent;
-}
-
-.btn-tentang:hover {
+nav ul.nav-buttons li a:hover {
   background-color: white;
   color: black;
+  box-shadow: 0 0 15px #fff;
 }
 
-/* Tentang Kami Section */
-.tentang-kami {
-  padding: 60px 20px;
+.anggota {
+  background: rgba(0, 0, 0, 0.5);
+  margin: 30px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 15px;
   text-align: center;
 }
 
-.tentang-kami h2 {
+.anggota h2 {
   font-size: 2em;
   margin-bottom: 20px;
+  color: #ff00ff;
+  text-shadow: 0 0 8px #ff00ff;
 }
 
-.tentang-kami p {
-  font-size: 1.1em;
-  line-height: 1.8;
-  white-space: pre-line;
+.pemisah {
+  border: 0;
+  height: 3px;
+  background: linear-gradient(to right, #00ffff, #ff00ff, #ffff00);
+  margin: 40px 0;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  border-top: 2px solid white;
 }
